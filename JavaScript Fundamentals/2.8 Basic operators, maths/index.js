@@ -33,7 +33,7 @@ undefined + 1       // NaN
 
 */
 
-//task 3
+//task 4
 a = prompt("First number?", 1);
 b = prompt("Second number?", 2);
 
