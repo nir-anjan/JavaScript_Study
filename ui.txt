@@ -1,0 +1,22 @@
+The whole layout has a lot of information, it has its good side but for me i like it to keep it simple and .
+we can give the left side bar a toggle to show effect coz it take more space and the icons can be improved and also the reablity of the side bar is poor , to switch between the acconts can be intergrated with in the profiles option
+For the chats , msgs or requests form a single client could be grouped in to one  to avoid repatation
+the time near sirvice drop down on ythe top is unclear is it the current time ?
+"Tools tab" can be changed to "client info"  ,its a litte crowded there and in the media and docs section the image view grid is not propperly aligned
+
+if the  bot icon at the bottom can be use to acces the main feature of the app the giving it purple color was a good idea but if its not the case the it can pull unwanted attension 
+
+
+
+
+The whole layout has a lot of information. It has its good side, but for me, I like to keep it simple.  
+
+We can give the left sidebar a toggle-to-show effect because it takes up more space. The icons can be improved, and the readability of the sidebar is poor. Switching between accounts can be integrated within the profile options.  
+
+For the chats, messages, or requests from a single client, they could be grouped into one to avoid repetition.  
+
+The time near the service drop-down at the top is unclear. Is it the current time?  
+
+The "Tools" tab can be changed to "Client Info" as it's a little crowded there. In the Media and Docs section, the image view grid is not properly aligned.
+
+If the bot icon at the bottom is used to access the main feature of the app, then giving it a purple colour was a good idea. However, if that’s not the case, it may draw unwanted attention.
