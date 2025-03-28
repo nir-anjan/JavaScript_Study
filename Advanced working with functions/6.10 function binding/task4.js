@@ -15,5 +15,5 @@ let user = {
     alert(`${this.name} failed to log in`);
   },
 };
-askPassword.bind(user);
-askPassword(user.loginOk, user.loginFail);
+
+askPassword(user.loginOk.bind(user), user.loginFail.bind(user));
