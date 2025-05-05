@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <div data-widget-name="menu">Choose the genre</div>
+
+  <script>
+    let elts = document.body.children;
+    for (let element of elts) {
+        if(element.hasAttribute("data-widget-name")){
+            console.log(element.getAttribute("data-widget-name"));
+        }
+    }
+  </script>
+</body>
+</html>
