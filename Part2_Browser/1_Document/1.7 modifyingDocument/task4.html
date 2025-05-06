@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <h1>The list is ...</h1>
+  <ul id="list"></ul>
+
+  <script>
+    while (true) {
+      let newItem = prompt("Enter the item (Press Esc or Cancel to stop):");
+      
+      
+      if (newItem === null) break;
+
+      let newNode = document.createElement("li");
+      newNode.textContent = newItem;
+      document.getElementById("list").append(newNode);
+    }
+  </script>
+</body>
+</html>
