@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    <input type="button" id="hider" value="Click to hide the text" />
+
+    <div id="text">Text</div>
+
+    <script>
+      let button = document.getElementById("hider");
+
+      function onclick() {
+        let element = document.getElementById("text");
+        element.remove();
+      }
+      button.addEventListener("click", onclick);
+    </script>
+  </body>
+</html>
