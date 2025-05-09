@@ -6,14 +6,21 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="element1"></div>
-    <div id="element2"></div>
-    <div id="element3"></div>
-    <script>
-      let text = "<h1>This is the text</h1>";
+    <h1 id="e1"></h1>
+    <h1 id="e2"></h1>
+    <h1 id="e3"></h1>
 
+    <script>
+      let element1 = document.getElementById("e1");
+      let text = "<h1>hey new text</h1>";
       element1.append(document.createTextNode(text));
+
+      let element2 = document.getElementById("e2");
+
       element2.innerHTML = text;
+
+      let element3 = document.getElementById("e3");
+
       element3.textContent = text;
     </script>
   </body>
