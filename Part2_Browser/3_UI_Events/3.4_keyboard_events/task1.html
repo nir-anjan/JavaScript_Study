@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>press q and w</p>
+    <script>
+      let keysPressed = {};
+
+      document.addEventListener("keydown", (event) => {
+        keysPressed[event.key] = true;
+
+        if (keysPressed["q"] && keysPressed["w"]) {
+          alert("Q and W pressed together!");
+        }
+      });
+
+      document.addEventListener("keyup", (event) => {
+        delete keysPressed[event.key];
+      });
+    </script>
+  </body>
+</html>
