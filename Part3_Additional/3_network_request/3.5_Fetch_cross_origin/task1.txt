@@ -1,0 +1,8 @@
+Why Origin is needed, if Referer has even more information?
+
+    Referer may leak sensitive info in the URL 
+    Origin hides all that. It only tells what site the request came from.
+
+Is it possible that there’s no Referer or Origin, or is it incorrect?
+
+    Yes, it is possible for both Referer and Origin to be missing
