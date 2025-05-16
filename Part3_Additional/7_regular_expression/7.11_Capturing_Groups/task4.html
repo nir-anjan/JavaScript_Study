@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function parse(expr) {
+        let match = expr.match(
+          /^\s*([+-]?\d*\.?\d+)\s*([+\-*/])\s*([+-]?\d*\.?\d+)\s*$/
+        );
+        if (!match) {
+          throw new Error("Invalid expression");
+        }
+        return [parseFloat(match[1]), match[2], parseFloat(match[3])];
+      }
+
+      let [a, op, b] = parse("1.2 * 3.4");
+
+      alert(a); // 1.2
+      alert(op); // *
+      alert(b); // 3.4
+    </script>
+  </body>
+</html>
