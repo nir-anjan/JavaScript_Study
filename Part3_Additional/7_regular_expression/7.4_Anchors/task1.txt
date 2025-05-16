@@ -1,0 +1,4 @@
+Which string matches the pattern ^$?
+
+
+empty string 
