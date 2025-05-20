@@ -147,28 +147,45 @@
     </div>
 
     <script>
-      let panels = Array.from(document.querySelectorAll(".panel"));
-      panels.forEach((panel) => {
-        panel.addEventListener("mouseenter", (e) => {
-          if (e.target !== panel) {
-            panel.classList.remove("open");
-            return;
-          }
-          panel.classList.add("open");
-          panel.classList.add("open-active");
-          console.log(panel);
-        });
+      // let panels = Array.from(document.querySelectorAll(".panel"));
+      // panels.forEach((panel) => {
+      //   panel.addEventListener("mouseenter", (e) => {
+      //     if (e.target !== panel) {
+      //       panel.classList.remove("open");
+      //       return;
+      //     }
+      //     panel.classList.add("open");
+      //     panel.classList.add("open-active");
+      //     console.log(panel);
+      //   });
 
-        panel.addEventListener("transitionend", (e) => {
-          if (e.target !== panel) return;
-          console.log(panel);
-          panel.classList.remove("open");
-          panel.classList.remove("open-active");
-          // if (e.propertyName.includes("flex")) {
-          //   this.classList.toggle("open-active");
-          // }
-        });
-      });
+      //   panel.addEventListener("transitionend", (e) => {
+      //     if (e.target !== panel) return;
+      //     console.log(panel);
+      //     panel.classList.remove("open");
+      //     panel.classList.remove("open-active");
+
+      //   });
+      // });
+
+      const panels = document.querySelectorAll(".panel");
+
+      function toggleOpen() {
+        console.log("Hello");
+        this.classList.toggle("open");
+      }
+
+      function toggleActive(e) {
+        console.log(e.propertyName);
+        if (e.propertyName.includes("flex")) {
+          this.classList.toggle("open-active");
+        }
+      }
+
+      panels.forEach((panel) => panel.addEventListener("click", toggleOpen));
+      panels.forEach((panel) =>
+        panel.addEventListener("transitionend", toggleActive)
+      );
     </script>
   </body>
 </html>
