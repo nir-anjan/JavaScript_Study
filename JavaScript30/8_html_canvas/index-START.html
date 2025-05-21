@@ -10,10 +10,12 @@
     <script>
       let canvas = document.getElementById("draw");
       let ctx = canvas.getContext("2d");
+
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-      ctx.fillStyle = "#F5F5DC";
-      ctx.strokeStyle = "#BADA55";
+
+      ctx.fillStyle = "#F5F5DC"; //bg colour
+      ctx.strokeStyle = "#BADA55"; // pen colour
       ctx.linejoin = "round";
       ctx.lineCap = "round";
 
