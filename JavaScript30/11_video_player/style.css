@@ -21,14 +21,12 @@ body {
 }
 
 .player {
-  /* max-width: 750px; */
+  max-width: 750px;
   border: 5px solid rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   position: relative;
   font-size: 0;
   overflow: hidden;
-  height: 948px;
-  width: 1678px;
 }
 
 /* This css is only applied when fullscreen is active. */
@@ -54,14 +52,12 @@ body {
   text-align: center;
   outline: 0;
   padding: 0;
-  font-size: 70px;
   cursor: pointer;
   max-width: 50px;
-  height: 50px;
 }
 
 .player__button:focus {
-  border-color: #ff0000;
+  border-color: #ffc600;
 }
 
 .player__slider {
@@ -78,7 +74,6 @@ body {
   transition: all 0.3s;
   flex-wrap: wrap;
   background: rgba(0, 0, 0, 0.1);
-  height: auto;
 }
 
 .player:hover .player__controls {
@@ -90,13 +85,7 @@ body {
 }
 
 .player__controls > * {
-  /* flex: 0.5; */
-  /* width: 100px; */
-}
-.box {
-  width: 1678px;
-  display: flex;
-  justify-content: space-around;
+  flex: 1;
 }
 
 .progress {
@@ -112,7 +101,7 @@ body {
 
 .progress__filled {
   width: 50%;
-  background: #ff0000;
+  background: #ffc600;
   flex: 0;
   flex-basis: 50%;
 }
@@ -144,7 +133,7 @@ input[type="range"]::-webkit-slider-thumb {
   height: 15px;
   width: 15px;
   border-radius: 50px;
-  background: #ff0000;
+  background: #ffc600;
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: -3.5px;
@@ -152,7 +141,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 input[type="range"]:focus::-webkit-slider-runnable-track {
-  background: #dda8a8;
+  background: #bada55;
 }
 
 input[type="range"]::-moz-range-track {
@@ -170,6 +159,6 @@ input[type="range"]::-moz-range-thumb {
   height: 15px;
   width: 15px;
   border-radius: 50px;
-  background: #ff0000;
+  background: #ffc600;
   cursor: pointer;
 }
