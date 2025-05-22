@@ -33,3 +33,10 @@ body {
   box-shadow: 0 6px 16px rgba(9, 141, 0, 0.5);
   background: linear-gradient(135deg, #3a3a3a, #1e1e1e);
 }
+
+a {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: center;
+}
