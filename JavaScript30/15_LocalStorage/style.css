@@ -79,3 +79,13 @@ h2 {
   outline: 0;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
+
+.btn {
+  border: none;
+  border-radius: 2px;
+  background-color: tomato;
+  font-weight: bold;
+  /* font-size: 1000px; */
+
+  color: rgb(255, 252, 240);
+}
