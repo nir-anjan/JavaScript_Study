@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  padding: 40px;
+  padding: 20px;
   font-family: sans-serif;
   background-color: #1a1a1a;
   color: #fff;
@@ -11,10 +11,12 @@ body {
 
 .card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   gap: 20px;
+  width: 100%;
   max-width: 1000px;
-  margin: auto;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .card-link {
@@ -29,6 +31,7 @@ body {
   font-weight: bold;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  text-align: center;
 }
 
 .card-link:hover {
@@ -42,4 +45,27 @@ a {
   flex-direction: column;
   gap: 5px;
   text-align: center;
+}
+
+/* Responsive Tweaks for Small Screens */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .card-link {
+    padding: 16px;
+    font-size: 14px;
+  }
+
+  .card-container {
+    gap: 12px;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+}
+
+@media (min-width: 1000px) {
+  .card-link {
+    font-size: 18px;
+  }
 }
