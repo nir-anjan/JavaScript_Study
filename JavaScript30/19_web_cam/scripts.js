@@ -23,6 +23,7 @@ function paintToCanvas() {
   const height = video.videoHeight;
   canvas.width = width;
   canvas.height = height;
+  flipCanvasHorizontally();
 
   return setInterval(() => {
     ctx.drawImage(video, 0, 0, width, height);
@@ -39,6 +40,11 @@ function paintToCanvas() {
     // put them back
     ctx.putImageData(pixels, 0, 0);
   }, 10);
+}
+
+function flipCanvasHorizontally() {
+  ctx.translate(canvas.width, 0); // move the context to the right edge
+  ctx.scale(-1, 1); // flip it horizontally
 }
 
 function takePhoto() {
