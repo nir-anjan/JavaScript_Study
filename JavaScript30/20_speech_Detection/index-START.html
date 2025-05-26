@@ -11,9 +11,10 @@
     <script>
       window.SpeechRecognition =
         window.SpeechRecognition || window.webkitSpeechRecognition;
+
       const recognition = new SpeechRecognition();
       recognition.interimResults = true;
-      recognition.lang = "eng-US";
+      recognition.lang = "en-US";
 
       let p = document.createElement("p");
       const words = document.querySelector(".words");
@@ -24,6 +25,10 @@
           .map((result) => result[0])
           .map((result) => result.transcript)
           .join("");
+        // const poopScript = transcript.replace(/poop|poo|shit|dump/gi, "💩");
+        // p.textContent = poopScript;
+
+        p.textContent = transcript;
 
         if (e.results[0].isFinal) {
           p = document.createElement("p");
