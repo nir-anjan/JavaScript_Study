@@ -24,12 +24,15 @@ function saveNotes(notes) {
 // Add a note
 function addNote(text) {
   const notes = loadNotes();
-  const newNote = { id: notes.length + 1, text };
+  const newNote = {
+    id: notes.length + 1,
+    text,
+    createdAt: new Date().toISOString(),
+  };
   notes.push(newNote);
   saveNotes(notes);
   return newNote;
 }
-
 //  Remove a note
 function removeNote(id) {
   let notes = loadNotes();
@@ -37,7 +40,10 @@ function removeNote(id) {
   if (index === -1) return null;
 
   const deleted = notes.splice(index, 1)[0];
-  notes = notes.map((note, i) => ({ id: i + 1, text: note.text }));
+
+  // Reassign IDs but keep original note properties
+  notes = notes.map((note, i) => ({ ...note, id: i + 1 }));
+
   saveNotes(notes);
   return deleted;
 }
@@ -50,6 +56,7 @@ function editNote(id, newText) {
 
   const oldText = note.text;
   note.text = newText;
+  note.updatedAt = new Date().toISOString();
   saveNotes(notes);
   return { oldText, newText };
 }
